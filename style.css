@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    background-color: pink;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+
+}
+
+  .todo__app {
+    background-color: #fff;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px 30px 45px;
+ }
+
+ .heading{
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    gap: 17px;
+ }
+
+ .todo__app img{
+    width: 50px;
+ }
+/* ROW */
+
+ .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(235, 230, 230);
+    padding-left: 14px;
+      border-radius: 30px;
+      margin-top: 17px;
+      margin-bottom: 15px;
+ }
+
+ #textInput{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 15px 15px 16px;
+ }
+
+ .addBtn{
+    border: none;
+    border-radius: 30px;
+    padding: 15px 50px;
+    cursor: pointer;
+    background-color: rgb(209, 139, 177);
+    color: #fff;
+    font-size: 18px;
+ }
+
+ /* list */
+ ul li{
+    padding: 15px 16px 18px 30px;
+
+    position: relative;
+ }
+ li{
+    font-size: 21px;
+    
+
+ }
+ /* unchecked */
+
+ ul li::before{
+    position: absolute;
+    content: "";
+    background-image: url('../images/unchecked.png');
+    width: 25px;
+    height: 25px;
+    background-size: cover;
+    background-position: center;
+    left: -6px;
+   
+ }
+
+
+ /* check */
+
+ ul li.checked::before{
+    content: "";
+    background-image: url('../images/checked.png');
+  
+ }
+
+ ul li.checked{
+    text-decoration: line-through;
+   
+ }
+
+
+ span{
+    position: absolute;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    transition: all .8s;
+ }
+
+ span:hover{
+    background-color: rgb(206, 204, 204);
+    border-radius: 40px;
+ }
